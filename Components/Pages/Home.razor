@@ -1,0 +1,17 @@
+﻿@page "/"
+
+<PageTitle>Bewerbung</PageTitle>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col">
+            <h1>Hello Docker!</h1>
+            <p>Running in Container: @IsRunningInContainer</p>
+            <p>Server Time: @DateTime.Now</p>
+        </div>
+    </div>
+</div>
+
+@code {
+    private bool IsRunningInContainer => Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true";
+}
